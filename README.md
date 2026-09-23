@@ -55,6 +55,11 @@ key. Never commit the real `.env` file.
 5. Point the site document root at this project, use PHP 8+, enable `pdo_pgsql`,
    and install Composer dependencies before opening the application.
 
+For container deployments, the included `Dockerfile` listens on HostForge's
+`PORT` variable and exposes `/health.php` as a database-independent readiness
+endpoint. Configure the HostForge health-check path as `/health.php` when the
+dashboard provides that option.
+
 The application uses HostForge-provided variables first. A local `.env` is read
 only for values that the hosting environment has not already configured.
 

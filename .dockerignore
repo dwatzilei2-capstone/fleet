@@ -1,0 +1,16 @@
+.git
+.github
+.env
+.env.*
+!.env.example
+config/*.local.php
+*.backup
+*.dump
+*.bak
+*.pem
+*.key
+*.p12
+*.pfx
+logs
+tmp
+vendor
